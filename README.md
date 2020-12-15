@@ -22,6 +22,12 @@ This is a new Project ,which beigins at 2020 12 10 ,aiming at studying SpringClo
    + git config --global user.name "your name"
 
    + git config --global user.email "your_email"
-+ 2.3 修改内容后将修改后的内容先加载到暂存区
-   + git add .  
-   上述语句代表加载该目录下所有修改了的或者新增的文件
++ 2.3 修改内容后将修改后的内容从工作区加载到暂存区
+   + git add可以添加文件或者目录，也可以使用通配符。比如：
+
+      git add Readme.md    # add file only
+
+      git add *.cpp        # add all cpp files
+
+      git add /home/code/  # add all files in /home/code
++ 2.4  
