@@ -86,7 +86,7 @@ live templates 模板<br>
  */
 
  使用时输入/* （再按tab）<br>
- 实体类注释：<br>
+ 类注释：<br>
 
  /**<br>
  \* @description：<br>
