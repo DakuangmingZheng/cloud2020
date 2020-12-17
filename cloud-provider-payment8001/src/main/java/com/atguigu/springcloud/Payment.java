@@ -1,17 +1,25 @@
 package com.atguigu.springcloud;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import java.io.Serializable;
+
 /**
  * @author ：DaDa
- * @description：
+ * @description：支付模块实体类
  * @date ：2020/12/17 11:15
  */
-public class Payment {
-    /*
-     * @author: DaDa
-     * @description: TODO
-     * @date: 2020/12/17 11:29
-     * @param str
-     * @return java.lang.String
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Payment implements Serializable {
+    /**
+     * 主键id
      */
-    public String test(String str){ return str; } 
+    private long id;
+    /**
+     * 订单流水号
+     */
+    private String serial;
 }
