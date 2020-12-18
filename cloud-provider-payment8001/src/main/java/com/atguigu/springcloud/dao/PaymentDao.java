@@ -18,7 +18,7 @@ public interface PaymentDao {
      * @param payment
      * @return int
      */
-    int creat(Payment payment);
+    int create(Payment payment);
    /**
     * 按照id查询payment表中的一条数据
     * @author:
