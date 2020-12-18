@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 
 /**
  * @author ：DaDa
- * @description：统一返回类型
+ * @description：Json封装体
  * @date ：2020/12/17 17:31
  */
 @Data
