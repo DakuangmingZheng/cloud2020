@@ -71,6 +71,41 @@ So! los'geht!
 
 ## 数据库安装使用(请根据自身情况自行学习：略)
 
+# 准备工作3.0
+idea添加实体类和方法的注释
+live templates 模板<br>
+方法注释：
+
+\**
+
+&nbsp; \* <br>
+&nbsp; \* @author: $author$<br>
+&nbsp; \* @date: $date$ $time$<br>
+&nbsp; $params$<br>
+&nbsp; $return$<br>
+ */<br>
+（ps：脚本<br>
+$params$：<br>
+ groovyScript("def result=''; def params=\"${_1}\".replaceAll('[\\\\[|\\\\]|\\\\s]', '').split(',').toList(); for(i = 0; i < params.size(); i++) {result+=' * @param ' + params[i] + ((i < params.size() - 1) ? '\\n' : '')}; return result.substring(1,result.length())", methodParameters()) 
+<br>
+<hr>
+<br>
+ $return$:<br>
+ groovyScript("def params=\"${_1}\"; if(params=='void'){return '';} else {return '* @return ' + params}", methodReturnType()) 
+）
+<br>
+<br>
+ 使用时输入/* （再按tab）<br>
+ <hr>
+ 类注释：<br>
+
+ /**<br>
+ \* <br>
+ \* @author     ：${USER}<br>
+ \* @date       ：${DATE} ${TIME}<br>
+ */
+
+
 <center><h2>----------------至此准备工作完毕---------------</h2></center>
 <br>
 
