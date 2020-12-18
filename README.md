@@ -103,7 +103,16 @@ $params$：<br>
  \* <br>
  \* @author     ：${USER}<br>
  \* @date       ：${DATE} ${TIME}<br>
- */
+ */<br>
+ <hr>
+ 
+ 自定义Mapper.xml filehead：<br>
+ \<?xml version="1.0" encoding="UTF-8" ?>
+\<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"><br>
+\<mapper namespace="com.atguigu.springcloud.dao">
+
+\</mapper><br>
+(!!请补全namespace！！）
 
 
 <center><h2>----------------至此准备工作完毕---------------</h2></center>
