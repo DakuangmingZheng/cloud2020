@@ -76,23 +76,43 @@ idea添加实体类和方法的注释
 live templates 模板<br>
 方法注释：
 
-\*
+\**
 
+&nbsp; \* <br>
 &nbsp; \* @author: $author$<br>
-&nbsp; \* @description: TODO<br>
 &nbsp; \* @date: $date$ $time$<br>
 &nbsp; $params$<br>
 &nbsp; $return$<br>
- */
-
+ */<br>
+（ps：脚本<br>
+$params$：<br>
+ groovyScript("def result=''; def params=\"${_1}\".replaceAll('[\\\\[|\\\\]|\\\\s]', '').split(',').toList(); for(i = 0; i < params.size(); i++) {result+=' * @param ' + params[i] + ((i < params.size() - 1) ? '\\n' : '')}; return result.substring(1,result.length())", methodParameters()) 
+<br>
+<hr>
+<br>
+ $return$:<br>
+ groovyScript("def params=\"${_1}\"; if(params=='void'){return '';} else {return '* @return ' + params}", methodReturnType()) 
+）
+<br>
+<br>
  使用时输入/* （再按tab）<br>
+ <hr>
  类注释：<br>
 
  /**<br>
- \* @description：<br>
+ \* <br>
  \* @author     ：${USER}<br>
  \* @date       ：${DATE} ${TIME}<br>
- */
+ */<br>
+ <hr>
+ 
+ 自定义Mapper.xml filehead：<br>
+ \<?xml version="1.0" encoding="UTF-8" ?>
+\<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"><br>
+\<mapper namespace="com.atguigu.springcloud.dao">
+
+\</mapper><br>
+(!!请补全namespace！！）
 
 
 <center><h2>----------------至此准备工作完毕---------------</h2></center>
