@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 
 /**
+ * 支付模块API
+ *
  * @author ：DaDa
  * @date ：2020/12/18 15:18
  */
@@ -21,6 +23,7 @@ public class PaymentController {
 
     /**
      * 插入payment表一条数据
+     *
      * @param payment
      * @return com.atguigu.springcloud.CommonResult
      * @author: DaDa
@@ -36,6 +39,7 @@ public class PaymentController {
 
     /**
      * 根据id获取payment表的一条数据
+     *
      * @param id
      * @return com.atguigu.springcloud.CommonResult
      * @author: DaDa
@@ -44,8 +48,8 @@ public class PaymentController {
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public CommonResult<?> getPayment(@PathVariable long id) {
         Payment payment = paymentService.getPayment(id);
-        log.info("******插入結果：" + payment);
-        return payment != null ? new CommonResult<>(200, "查询数据成功", payment) : new CommonResult<>(444, "查询数据失败，查询id："+id, null);
+        log.info("******查询結果：" + payment);
+        return payment != null ? new CommonResult<>(200, "查询数据成功", payment) : new CommonResult<>(444, "查询数据失败，查询id：" + id, null);
 
     }
 }
